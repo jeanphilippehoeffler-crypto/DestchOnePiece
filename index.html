@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePiece - Attrape les Chapeaux de Paille !</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="hud">
+            <span id="hudNiveau">Niveau : 1</span>
+            <span id="hudScore">Chapeaux : 0 / 10</span>
+        </div>
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+        <div id="touchControls">
+            <button id="btnLeft" aria-label="Gauche">&#x2B05;&#xFE0F;</button>
+            <button id="btnRight" aria-label="Droite">&#x27A1;&#xFE0F;</button>
+        </div>
+        <div id="startScreen">
+            <h1>&#x1F3F4;&#x200D;&#x2620;&#xFE0F; OnePiece &#x1F3F4;&#x200D;&#x2620;&#xFE0F;</h1>
+            <p>Attrape <strong>10 chapeaux de paille</strong> pour finir chaque &eacute;tape !<br>
+            R&eacute;ponds au quiz de traduction pour passer au niveau suivant.<br>
+            La vitesse augmente &agrave; chaque niveau !</p>
+            <p class="controls">&#x2B05;&#xFE0F; &#x27A1;&#xFE0F; Fl&egrave;ches du clavier ou boutons tactiles</p>
+            <button id="btnStart">Commencer l'aventure !</button>
+        </div>
+        <div id="quizModal" style="display:none;">
+            <div class="modal-content">
+                <h2>&#x1F393; Quiz de Traduction</h2>
+                <p id="quizEtape"></p>
+                <p id="quizQuestion"></p>
+                <div id="quizOptions"></div>
+                <p id="quizFeedback"></p>
+            </div>
+        </div>
+        <div id="victoryScreen" style="display:none;">
+            <div class="modal-content">
+                <h1>&#x1F3C6; Bravo, Roi des Pirates ! &#x1F3C6;</h1>
+                <p>Tu as termin&eacute; tous les niveaux !</p>
+                <button id="btnRestart">Rejouer</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
